@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
-import useYogeshHook from './hooks/yogesh-hook'
+import useYogeshHook from 'useyogeshhook'
 function App() {
   const [isOn,setIson] = useYogeshHook();
   return (
