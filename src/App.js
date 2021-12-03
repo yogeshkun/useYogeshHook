@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
+import useYogeshHook from './hooks/yogesh-hook'
 function App() {
+  const [isOn,setIson] = useYogeshHook();
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,7 +18,8 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
+        <button onClick={()=>setIson(isOn=>!isOn  )}>Is Active {`${isOn}`}</button>
       </header>
     </div>
   );
